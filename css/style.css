@@ -1,0 +1,210 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    position: relative;
+    height: 50px;/* ************* */
+}
+
+nav{
+    position: fixed;/* ************* */
+    width: 100%;/* ************* */
+    height: 50px;
+    background-color: #212121;
+    z-index: 2;/* ************* */
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between; /* выравнивает список меню по горизонтали */
+    padding: 13px 70px; /* 13 пикселей это высота от разделяющих линий между блоками, но изначально было 10, потом 3 добавили чтоб подогнять по высоте, потому что высота блока menu не дотягивала до высоты шапки header */
+    margin: 0; /* потому что у бутстрепа margin-bottom стоит 1rem */
+    list-style-type: none;/* убирает маркеры у списка */
+}
+
+.menu .menu_link{
+    font-size: 15px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.menu .menu_item{/* разделяющие линии */
+border-right: 2px dotted black; /* 1)размер границы 2)точками 3)цвет */
+padding-right: 28px;/* внутренний отступ */
+}
+
+.subheader{
+    position: absolute;
+    top: 50px;/* ************* */
+    width: 100%;
+    height: 84px;
+    /* opacity: 0.6;прозрачность убираем */
+    background-color: rgba(0,0,0,0.6);/* добавляем прозрачность через rgba */
+}
+
+.subheader .subheader_logo{
+    display: block;/* ссылки строчный элемент, марджины не будут работать */
+    max-width: 100%; /* ограничивает максимальную ширину логотипа на будущее (4 клонки) */
+    margin-top: 16px;
+}
+
+.subheader .subheader_official{
+    margin-top: 6px;
+    opacity: 0.5;
+    font-size: 13px;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+.subheader .subheader_call{
+    margin-top: 19px;
+    text-align: right;/* выравнивание текста по правому краю */
+    font-size: 12px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.subheader .subheader_phone{
+    display: block;
+    margin-top: 8px;
+    text-align: right;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 12px;/* ссылка сьехала вниз, для этого установили маленький лайн хайт */
+}
+
+.subheader .subheader_btn{
+    margin-top: 19px;
+    width: 178px;
+    height: 52px;
+    background-image: linear-gradient(0.0deg, #1eacc7 0%, #4ce2ff 100%);
+    border: none;/* 3px solid rgba(0,0,0,0.06); */
+    border-radius: 4px;/* округляет границы */
+    box-shadow: inset 0px -3px 0px 0px rgba(0,0,0,0.11);
+
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+    color: #ffffff;
+}
+
+.promo{
+    min-height: 800px;
+    background: url('../img/top_bg.png') center center/cover no-repeat;
+    padding: 150px 0 135px 0; /* расстояние от заголовка h1 до нав.меню + вниз от кнопки */
+}
+
+.promo .promo_header{
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 60px;
+    margin: 0;
+    text-align: center;
+}
+
+.promo .promo_subheader{
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 36px;
+    margin: 0;
+    margin-top: 22px;
+    text-align: center;
+}
+
+.promo .promo_descr{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 23px;
+}
+
+.promo .promo_btn{
+    display: block;/* кнопка это ин лайн элемент */
+    margin: 118px auto 0 auto;
+    width: 265px;
+    height: 69px;
+    background-image: linear-gradient(0.0deg, #1eacc7 0%, #4ce2ff 100%);
+    border: none;
+    border-radius: 4px;
+    box-shadow: inset 0px -4px 0px 0px rgba(0,0,0,0.11);
+
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+    color: #ffffff;
+}
+
+.work{
+    padding: 71px 0 68px 0;/* секция */
+}
+
+.label{/* в черной рамке текст */
+    /* display: block; */
+    margin: 0 auto;
+    width: 112px;
+    height: 24px;
+    padding: 4px 12px;/* отступ текста сверху и по бокам */
+    background-color: #000000;
+    font-size: 11px;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+}
+
+.title{/* заголовок */
+    margin-bottom: 0;
+    margin-top: 38px;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+    text-align: center;
+}
+
+.work .work_block{/* общий блок с картинками и текстом */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.work .work_block .work_round{/* фон для картинок круглый синий */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26px;
+    width: 113px;
+    height: 113px;
+    background-color: #1eacc7;
+    border-radius: 100%;
+}
+
+.work .work_block .work_text{/* блок с двумя текстами */
+    width: 343px;
+}
+
+.work .work_block .work_blue{/* синий текст */
+    font-size: 17px;
+    font-weight: 400;
+    color: #1eacc7;
+    line-height: 21px;
+}
+
+.work .work_block .work_descr{/* мелкий текст */
+    font-size: 15px;
+    font-weight: 300;
+    color: #202020;
+    line-height: 21px;
+}
